@@ -33,7 +33,7 @@ const Chat = () => {
                     justifyContent: "end",
                     padding: "10px 20px"
                 }}>
-                    <Link href="/quz/1">
+                    <Link href="/quiz/1">
                         次へ {">>"}
                     </Link>
                 </div>
