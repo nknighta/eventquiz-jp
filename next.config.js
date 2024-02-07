@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  assetPrefix: process.env.GITHUB_PAGRS ? 'cid-expo-quiz': '',
+  assetPrefix: process.env.GITHUB_PAGES ? 'cid-expo-quiz': '',
   images: { unoptimized: true }
 }
 
