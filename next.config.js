@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: 'https://cidschool.github.io/cid-expo-quiz',
   trailingSlash: true,
+  assetPrefix: process.env.GITHUB_PAGRS ? 'cid-expo-quiz': '',
   images: { unoptimized: true }
 }
 
