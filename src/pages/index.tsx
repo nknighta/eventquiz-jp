@@ -1,6 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import Layout from "../layout/main";
 import { useState } from "react";
+import BasePath from "../scripts/basepath.tsx";
 
 const Chat = () => {
     const [typingStatus, setTypingStatus] = useState(0);
@@ -32,16 +33,13 @@ const Chat = () => {
                     justifyContent: "end",
                     padding: "10px 20px"
                 }}>
-                    <a
-                        href="/quiz/1" 
-                        style={{
-                            textDecorationLine: "underline",
-                            color: "#000000",
-                            fontSize: "1.2em",
-                        }}>
+                    <BasePath
+                        pagepath="/quiz/1" 
+                      >
                         次へ {">>"}
-                    </a>
-                </div>
+                    
+                </BasePath>
+		</div>
             ) : ('')}
         </Layout>
     )
