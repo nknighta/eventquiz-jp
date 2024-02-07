@@ -23,15 +23,17 @@ export default function Layout({ children }: any) {
 	}, []);
 	return (
 		<div style={{
-			backgroundColor: "#000",
-			color: "#fff",
+			color: "#000000",
 			height: windowSize.height,
 			display: "flex",
-			justifyContent:"center"
+			justifyContent: "center",
+			fontSize: '2.5vh',
 		}}>
 			<div
 				style={{
-					width: 600
+					width: 600,
+					backgroundColor: "#F8E4AB",
+					padding: "50px 10px",
 				}}>
 				{children}
 			</div>

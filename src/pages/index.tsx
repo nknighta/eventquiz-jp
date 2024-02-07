@@ -1,69 +1,51 @@
+import { TypeAnimation } from "react-type-animation";
 import Layout from "../layout/main";
-import Image from "next/image"
-import { useRouter } from "next/router";
+import { useState } from "react";
 
-export default function Index() {
-	const router = useRouter();
-	return (
-		<Layout>
-			<div style={{
-				width: "100%",
-				height: "100%",
-				position: "absolute",
-				top: 0,
-				left: 0,
-				backgroundColor: "rgba(0,0,0,0.5)",
-				zIndex: 1,
-
-			}}>
-				<div style={{
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
-					height: "50%",
-					width: "100%",
-					fontSize: "3rem",
-					fontWeight: "bold",
-				}}>
-					CID 謎解き
-				</div>
-				<div style={{
-					display: "flex",
-					justifyContent: "center",
-					alignItems: "center",
-					height: "50%",
-					width: "100%",
-				}}>
-					<button style={{
-						width: "30vh",
-						height: "50px",
-						fontSize: "2rem",
-						fontWeight: "bold",
-						backgroundColor: "#00aaff",
-						border: "none",
-						outline: "none",
-						color: "white",
-						cursor: "pointer",
-						borderRadius: "50px",
-					}}
-						onClick={() => {
-							router.push("/quiz")
-						}}
-					>
-						さあ、はじめよう！
-					</button>
-				</div>
-			</div>
-			<Image
-				src={"/image.jpeg"}
-				layout={`fill`}
-				objectFit={`cover`}
-				alt="bgImage"
-				style={{
-					position: "absolute",
-					opacity: 0.75
-				}}
-			/>
-		</Layout>
-	)
+const Chat = () => {
+    const [typingStatus, setTypingStatus] = useState(0);
+    return (
+        <Layout>
+            <div style={{
+                height: '80vh',
+            }}>
+                <TypeAnimation
+                    style={{ whiteSpace: 'pre-line', display: 'block' }}
+                    sequence={[
+                        `2030年2月、私は上司のソーンダイク警部とともに、事故の調査に赴いていた。
+						一緒にいるソーンダイク警部は科学を用いた捜査が得意な信頼できる方だ。\n
+						今回の調査の主な概要はこうだ。自殺者はジョン・F・マッカーシー。\n
+						世界初の汎用AI開発の第一人者であり、この世界で使われている汎用AI「ミリア(MiliA)」の開発者だ。\n そんな彼が彼の所有するラボで服薬自殺をしていたという。一見ただの自殺だとは思うが、違和感を覚えた私はソーンダイク警部に無理を言って、改めて現場の調査を行うことにした。
+						`,
+                        () => {
+                            setTypingStatus(2);
+                        }
+                    ]}
+                    cursor={false}
+                    speed={50}
+                />
+                
+            </div>
+            {typingStatus == 2 ? (
+                <div style={{
+                    display: "flex",
+                    justifyContent: "end",
+                    padding: "10px 20px"
+                }}>
+                    <a
+                        href="/quiz/1" 
+                        style={{
+                            textDecorationLine: "underline",
+                            color: "#000000",
+                            fontSize: "1.2em",
+                        }}>
+                        次へ {">>"}
+                    </a>
+                </div>
+            ) : ('')}
+        </Layout>
+    )
 }
+
+
+export default Chat;

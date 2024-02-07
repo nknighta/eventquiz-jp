@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
+    "dev:net": "next dev -H 172.31.22.198",
     "build": "next build",
     "start": "next start"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/next": "^9.0.0",
     "@types/node": "^20.11.7",
