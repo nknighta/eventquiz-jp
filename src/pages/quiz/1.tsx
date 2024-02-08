@@ -1,6 +1,8 @@
 import Layout from "../../layout/main";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
+import Link from "next/link";
+
 export default function QuizPage1() {
     const [typingStatus, setTypingStatus] = useState(0);
     return (
@@ -21,9 +23,8 @@ export default function QuizPage1() {
                     }
                 ]}
                 cursor={false}
-                speed={50}
+                speed={80}
             />
-
             {typingStatus == 2 ? (
                 <div style={{
                     padding: "10px 20px"
@@ -32,23 +33,64 @@ export default function QuizPage1() {
                         <a
                             href="/quiz/1"
                             style={{
-                                textDecorationLine: "underline",
-                                color: "#000000",
-                                fontSize: "1.2em",
+                                textDecoration: "none",
+                                color: "black"
                             }}>
-                            次へ {">>"}
+                            自殺の動機 {">>"}
                         </a>
                     </div>
                     <div>
-                        <a
+                        <Link
                             href="/quiz/1"
                             style={{
-                                textDecorationLine: "underline",
-                                color: "#000000",
-                                fontSize: "1.2em",
+                                textDecoration: "none",
+                                color: "black"
                             }}>
-                            次へ {">>"}
-                        </a>
+                            放置されたPC {">>"}
+                        </Link>
+                    </div>
+
+                    <div>
+                        <Link
+                            href="/quiz/1"
+                            style={{
+                                textDecoration: "none",
+                                color: "black"
+                            }}>
+                            自殺時に飲んだ薬 {">>"}
+                        </Link>
+                    </div>
+
+                    <div>
+                        <Link
+                            href="/quiz/1"
+                            style={{
+                                textDecoration: "none",
+                                color: "black"
+                            }}>
+                            不自然な数字 {">>"}
+                        </Link>
+                    </div>
+                    <div>
+                        <Link
+                            href="/quiz/1"
+                            style={{
+                                textDecoration: "none",
+                                color: "black"
+                            }}>
+                            ラボ {">>"}
+                        </Link>
+                    </div>
+                    {/** 2回目以降は?load=trueでアニメーション停止 */ }
+                    <div>
+                        <Link
+                            href="/?load=true"
+                            style={{
+                                textDecoration: "none",
+                                color: "black"
+                            }}>
+                            {"<<"} 戻る
+                        </Link>
                     </div>
                 </div>
             ) : ('')}
