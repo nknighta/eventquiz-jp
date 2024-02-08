@@ -27,7 +27,7 @@ export default function Layout({ children }: any) {
 			height: windowSize.height,
 			display: "flex",
 			justifyContent: "center",
-			fontSize: '28px',
+			fontSize: '25px',
 		}}>
 			<div
 				style={{
