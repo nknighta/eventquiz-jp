@@ -1,4 +1,4 @@
-import Layout from "../../layout/main";
+import Layout from "../../../layout/main";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import Link from "next/link";
