@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 import menustyle from "./menu.module.css";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Layout({ children }: any) {
 	const [menuopen, setMenuopen] = useState(false);
+	const [copystatus, setCopystatus] = useState(false);
 	const router = useRouter();
 	const [windowSize, setWindowSize] = useState({
 		height: 0,
+		width: 0
 	});
-	console.log(menuopen);
+	const isBrowser = typeof window !== "undefined";
 	useEffect(() => {
-		if (typeof window !== "undefined") {
+		if (isBrowser) {
 			const handleResize = () => {
 				setWindowSize({
 					height: window.innerHeight,
+					width: window.innerWidth
 				});
 			};
 
@@ -25,13 +27,23 @@ export default function Layout({ children }: any) {
 			return;
 		}
 	}, [])
+
+	const urlcliper = async (url: string) => {
+		try {
+			await navigator.clipboard.writeText(url);
+			setCopystatus(true);
+			console.log("succes copy")
+		} catch {
+			console.error("copy faild");
+		}
+	}
 	// #F8E4ABaa
 	return (
 		<div style={{
 			height: windowSize.height,
-			backgroundColor: menuopen ? "#F8E4ABaa" : "#F8E4AB",
+			backgroundColor: menuopen ? "#ab9d76" : "#F8E4AB",
 			transition: "background-color 0.5s",
-			fontSize: '25px',
+			fontSize: windowSize.width > 400 ? '23px' : '17px'
 		}}>
 			<div>
 				<button
@@ -53,7 +65,25 @@ export default function Layout({ children }: any) {
 					{"< "}Menu
 				</button>
 
-				<div className={menuopen ? menustyle.opened : menustyle.closed}>
+				<div style={menuopen ? {
+					backgroundColor: "#00000058",
+					color: "#fff",
+					position: "fixed",
+					width: "350px",
+					left: "0",
+					borderRight: "1px solid #fff",
+					height: "100%",
+					transition: "left 0.4s",
+				} : {
+					backgroundColor: "#00000058",
+					color: "#fff",
+					position: "fixed",
+					width: "350px",
+					left: "-450px",
+					borderRight: "1px solid #fff",
+					height: "100%",
+					transition: "left 0.18s",
+				}}>
 					CID 謎解き
 					<div style={{
 						fontSize: "24px",
@@ -87,7 +117,7 @@ export default function Layout({ children }: any) {
 								style={{
 									margin: "10px 10px",
 									height: "40px",
-									width: "130px",
+									width: "200px",
 									fontSize: "20px",
 									borderRadius: "5px",
 									border: "none",
@@ -98,6 +128,30 @@ export default function Layout({ children }: any) {
 
 								}}>
 								ひとつ前に戻る
+							</button>
+						</div>
+
+						<div>
+							<button onClick={() => {
+								urlcliper(location.href)
+							}}
+								style={{
+									margin: "10px 10px",
+									width: "200px",
+									height: "40px",
+									fontSize: "20px",
+									borderRadius: "5px",
+									border: "none",
+									background: "#00000000",
+									color: "#fff",
+									cursor: "pointer",
+									padding: "5px",
+								}}>
+								{copystatus ? (
+									"コピー完了"
+								) : (
+									"現在のURLをコピー"
+								)}
 							</button>
 						</div>
 					</div>
@@ -116,6 +170,7 @@ export default function Layout({ children }: any) {
 						}}
 						onClick={() => {
 							setMenuopen(false);
+							setCopystatus(false);
 						}}>
 						閉じる
 					</button>
