@@ -57,55 +57,12 @@ export default function QuizPage1() {
                         padding: "10px 20px"
                     }}>
                         <div>
-                            <a
-                                href="/quiz/1/hint?id=1"
-                                style={{
-                                    textDecoration: "none",
-                                    color: "black"
-                                }}>
-                                自殺の動機 {">>"}
-                            </a>
-                        </div>
-                        <div>
-                            <Link
-                                href="/quiz/1"
-                                style={{
-                                    textDecoration: "none",
-                                    color: "black"
-                                }}>
-                                放置されたPC {">>"}
-                            </Link>
-                        </div>
-
-                        <div>
-                            <Link
-                                href="/quiz/1"
-                                style={{
-                                    textDecoration: "none",
-                                    color: "black"
-                                }}>
-                                自殺時に飲んだ薬 {">>"}
-                            </Link>
-                        </div>
-
-                        <div>
-                            <Link
-                                href="/quiz/1"
-                                style={{
-                                    textDecoration: "none",
-                                    color: "black"
-                                }}>
-                                不自然な数字 {">>"}
-                            </Link>
-                        </div>
-                        <div>
-                            <Link
-                                href="/quiz/1"
-                                style={{
-                                    textDecoration: "none",
-                                    color: "black"
-                                }}>
-                                ラボ {">>"}
+                            <Link href={"/quiz/1/hint?id=1"}
+                            style={{
+                                textDecoration: "none",
+                                color: "#000"
+                            }}>
+                                博士の死因・周辺のアリバイを調べる
                             </Link>
                         </div>
                         {/** 2回目以降は?load=trueでアニメーション停止 */}

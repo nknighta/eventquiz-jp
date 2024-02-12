@@ -6,12 +6,16 @@ export default function Hint() {
     const { id } = router.query;
     return (
         <Layout>
-            {id}
+            {id == "1" ? <P1/>: <>222</>}
         </Layout>
     )
 }
 
 // パターン1
-function P1 () {
-    
+function P1() {
+    return (
+        <>
+            p1
+        </>
+    )
 }

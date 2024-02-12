@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Layout from "../layout/main";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
