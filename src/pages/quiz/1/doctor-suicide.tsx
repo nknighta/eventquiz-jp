@@ -5,7 +5,7 @@ import Scolloer from '../../../content/scolloer';
 import { useState } from 'react';
 import HMeta from '../../../content/hmeta';
 
-const Chat = ({ anibefore, aniafter }) => {
+const Chat = () => {
     const [typingStatus, setTypingStatus] = useState(0);
     const router = useRouter();
     const { load } = router.query;
