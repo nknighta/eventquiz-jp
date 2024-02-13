@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import menustyle from "./menu.module.css";
 import { useRouter } from "next/router";
 
 export default function Layout({ children }: any) {
@@ -43,7 +42,8 @@ export default function Layout({ children }: any) {
 			height: windowSize.height,
 			backgroundColor: menuopen ? "#ab9d76" : "#F8E4AB",
 			transition: "background-color 0.5s",
-			fontSize: windowSize.width > 400 ? '23px' : '17px'
+			fontSize: windowSize.width > 400 ? '23px' : '17px',
+			overflow: "hidden",
 		}}>
 			<div>
 				<button
@@ -69,7 +69,7 @@ export default function Layout({ children }: any) {
 					backgroundColor: "#00000058",
 					color: "#fff",
 					position: "fixed",
-					width: "350px",
+					width:"350px",
 					left: "0",
 					borderRight: "1px solid #fff",
 					height: "100%",
@@ -94,7 +94,7 @@ export default function Layout({ children }: any) {
 								style={{
 									margin: "10px 10px",
 									height: "40px",
-									width: "130px",
+									width: "200px",
 									fontSize: "20px",
 									borderRadius: "5px",
 									border: "none",
@@ -104,10 +104,10 @@ export default function Layout({ children }: any) {
 									padding: "5px",
 								}}
 								onClick={() => {
-									router.push("/?load=true")
+									router.push("/")
 									setMenuopen(false);
 								}}>
-								最初に戻る
+								最初から
 							</button>
 						</div>
 						<div>
@@ -154,6 +154,25 @@ export default function Layout({ children }: any) {
 								)}
 							</button>
 						</div>
+						<div>
+							<button onClick={() => {
+								router.push("https://cidexpo2024.cid-ac.com/works-experience/")
+							}}
+								style={{
+									margin: "10px 10px",
+									width: "200px",
+									height: "40px",
+									fontSize: "20px",
+									borderRadius: "5px",
+									border: "none",
+									background: "#00000000",
+									color: "#fff",
+									cursor: "pointer",
+									padding: "5px",
+								}}>
+								会場マップ
+							</button>
+						</div>
 					</div>
 					<button
 						style={{
@@ -180,6 +199,7 @@ export default function Layout({ children }: any) {
 				style={{
 					padding: "50px 10px",
 				}}>
+
 				{children}
 			</div>
 		</div>

@@ -3,6 +3,8 @@ import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Scolloer from "../../../content/scolloer";
+import HMeta from "../../../content/hmeta";
 
 export default function QuizPage1() {
     const router = useRouter();
@@ -23,7 +25,10 @@ export default function QuizPage1() {
         )
     }
     return (
+
         <Layout>
+
+            <HMeta pageTitle={"Q1"} />
             <div
                 onClick={() => {
                     setTypingStatus(2);
@@ -33,35 +38,37 @@ export default function QuizPage1() {
                 }}>
                 {/** 2回目以降は?load=trueでアニメーション停止 */}
                 <p>(タップでスキップ)</p>
-                {typingStatus == 2 ? (<Content />) : (
-                    <TypeAnimation
-                        style={{ whiteSpace: 'pre-line', display: 'block', height: "100%" }}
-                        sequence={[
-                            `
+                <Scolloer>
+                    {typingStatus == 2 ? (<Content />) : (
+                        <TypeAnimation
+                            style={{ whiteSpace: 'pre-line', display: 'block', height: "100%" }}
+                            sequence={[
+                                `
                     私はソーンダイク警部と共に、ジョン博士の自殺を見ていくと、５つの疑問点があった。\n
                     １つ目は彼の自殺の動機。
                     ２つ目は不自然に壊され放置されたPC。
                     ３つ目は彼が自殺時に飲んだ薬について。
                     ４つ目はこのラボに点在する不自然な数字。\n
-                    ５つ目は個人的な疑問だが、このラボについてミリアに聞いても、返答が無いことだ。さて、どれから調べていこうか
+                        ５つ目は個人的な疑問だが、このラボについてミリアに聞いても、返答が無いことだ。さて、どれから調べていこうか
 					`,
-                            () => {
-                                setTypingStatus(2);
-                            }
-                        ]}
-                        cursor={false}
-                        speed={80}
-                    />)}
+                                () => {
+                                    setTypingStatus(2);
+                                }
+                            ]}
+                            cursor={false}
+                            speed={80}
+                        />)}
+                </Scolloer>
                 {typingStatus == 2 ? (
                     <div style={{
                         padding: "10px 20px"
                     }}>
                         <div>
-                            <Link href={"/quiz/1/hint?id=1"}
-                            style={{
-                                textDecoration: "none",
-                                color: "#000"
-                            }}>
+                            <Link href={"/quiz/1/doctor-suicide"}
+                                style={{
+                                    textDecoration: "none",
+                                    color: "#000"
+                                }}>
                                 博士の死因・周辺のアリバイを調べる
                             </Link>
                         </div>

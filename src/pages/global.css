@@ -6,3 +6,8 @@
 	font-family: "Noto Serif JP", sans-serif;
 	font-optical-sizing: auto;
 }
+
+::selection {
+	background-color: #000;
+	color: #fff
+}
