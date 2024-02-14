@@ -28,20 +28,20 @@ export default function QuizPage1() {
 
         <Layout>
 
-            <HMeta pageTitle={"Q1"} />
+            <HMeta />
             <div
                 onClick={() => {
                     setTypingStatus(2);
                 }}
                 style={{
-                    height: '77vh',
+                    height  : '77vh',
                 }}>
                 {/** 2回目以降は?load=trueでアニメーション停止 */}
                 <p>(タップでスキップ)</p>
                 <Scolloer>
-                    {typingStatus == 2 ? (<Content />) : (
+                    {typingStatus == 2 ? (<Content />)   : (
                         <TypeAnimation
-                            style={{ whiteSpace: 'pre-line', display: 'block', height: "100%" }}
+                            style={{ whiteSpace  : 'pre-line', display  : 'block', height  : "100%" }}
                             sequence={[
                                 `
                     私はソーンダイク警部と共に、ジョン博士の自殺を見ていくと、５つの疑問点があった。\n
@@ -61,30 +61,33 @@ export default function QuizPage1() {
                 </Scolloer>
                 {typingStatus == 2 ? (
                     <div style={{
-                        padding: "10px 20px"
-                    }}>
-                        <div>
-                            <Link href={"/quiz/1/doctor-suicide"}
-                                style={{
-                                    textDecoration: "none",
-                                    color: "#000"
-                                }}>
-                                博士の死因・周辺のアリバイを調べる
-                            </Link>
-                        </div>
+                        padding  : "10px 20px",
+                        display  : "flex",
+                        justifyContent  : "space-between"
+                        }}>
                         {/** 2回目以降は?load=trueでアニメーション停止 */}
                         <div>
                             <Link
                                 href="/?load=true"
                                 style={{
-                                    textDecoration: "none",
-                                    color: "black"
+                                    textDecoration  : "none",
+                                    color  : "black"
                                 }}>
                                 {"<<"} 戻る
                             </Link>
                         </div>
+
+                        <div>
+                            <Link href={"/quiz/1/doctor-suicide"}
+                                style={{
+                                    textDecoration  : "none",
+                                    color  : "#000"
+                                }}>
+                                次へ{" >>"}
+                            </Link>
+                        </div>
                     </div>
-                ) : ('')}
+                )   : ('')}
             </div>
         </Layout >
     )

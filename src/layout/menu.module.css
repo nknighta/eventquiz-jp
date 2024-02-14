@@ -1,23 +1,23 @@
 
 
 .opened {
-    background-color: #00000058;
-    color: #fff;
-    position: fixed;
-    width: 450px;
-    height: 100%;
-    border-right: 3px solid #fff;
-    left: 0;
-    transition: 0.3s;
+    background-color  : #00000058;
+    color  : #fff;
+    position  : fixed;
+    width  : 450px;
+    height  : 100%;
+    border-right  : 3px solid #fff;
+    left  : 0;
+    transition  : 0.3s;
 }
 
 .closed {
-    background-color: #00000058;
-    color: #fff;
-    position: fixed;
-    width: 450px;
-    height: 100%;
-    border-right: 3px solid #fff;
-    left: -450px;
-    transition: 0.2s;
+    background-color  : #00000058;
+    color  : #fff;
+    position  : fixed;
+    width  : 450px;
+    height  : 100%;
+    border-right  : 3px solid #fff;
+    left  : -450px;
+    transition  : 0.2s;
 }

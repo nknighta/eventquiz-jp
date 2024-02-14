@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
 
 * {
-	padding: 0;
-	margin: 0;
-	font-family: "Noto Serif JP", sans-serif;
-	font-optical-sizing: auto;
+	padding  : 0;
+	margin  : 0;
+	font-family  : "Noto Serif JP", sans-serif;
+	font-optical-sizing  : auto;
 }
 
-::selection {
-	background-color: #000;
-	color: #fff
+  ::selection {
+	background-color  : #000;
+	color  : #fff
 }

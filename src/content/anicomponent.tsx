@@ -24,7 +24,7 @@ const Chat = ({ anibefore, aniafter }) => {
                         (
                             anibefore
                         )
-                        : (
+                          : (
                             aniafter
                         )}
                 </Scolloer>

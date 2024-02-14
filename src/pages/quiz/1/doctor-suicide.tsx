@@ -14,10 +14,10 @@ const Chat = () => {
         return (
             <>
                 (はじめに) <br />
-                あなた : じゃあ彼の自殺の動機を調べていこう
+                あなた   : じゃあ彼の自殺の動機を調べていこう
                 <br />
                 <br />
-                ソーンダイク警部 : こいつの自殺、ちょっとばかり分からないことが多いな。
+                ソーンダイク警部   : こいつの自殺、ちょっとばかり分からないことが多いな。
                 関係者にアリバイとかを聞いてみるか
             </>
         )
@@ -36,17 +36,17 @@ const Chat = () => {
                         (
                             <Content />
                         )
-                        : (
+                          : (
                             typingStatus == 2 ? (
                                 <Content />
-                            ) : (
+                            )   : (
                                 <div>
                                     <TypeAnimation
-                                        style={{ whiteSpace: 'pre-line', display: 'block'}}
+                                        style={{ whiteSpace  : 'pre-line', display  : 'block'}}
                                         sequence={[
                                             `(はじめに)
-                                            あなた : じゃあ彼の自殺の動機を調べていこう\n
-                                            ソーンダイク警部 : こいつの自殺、ちょっとばかり分からないことが多いな。関係者にアリバイとかを聞いてみるか
+                                            あなた   : じゃあ彼の自殺の動機を調べていこう\n
+                                            ソーンダイク警部   : こいつの自殺、ちょっとばかり分からないことが多いな。関係者にアリバイとかを聞いてみるか
 						            `,
                                             () => {
                                                 setTypingStatus(2);
@@ -63,19 +63,30 @@ const Chat = () => {
             </div>
 
             {typingStatus == 2 ? (
-                <div>
-                    <TypeAnimation
-                        style={{ whiteSpace: 'pre-line', display: 'block',}}
-                        sequence={[
-                            `(○○)のブースに向かえ`,
-                            () => {
-                            }
-                        ]}
-                        cursor={true}
-                        speed={80}
-                    />
-                </div>
-            ) : ("")}
+                
+                    <div style={{
+                display  : "flex",
+                justifyContent  : "space-between"
+                }}>
+                    <Link
+                    href={"/quiz/1/"} style={{
+                        textAlign  : "right",
+                        textDecoration  : "none",
+                        color  : "#000"
+                    }}>
+                       {"<< "} 戻る
+                    </Link>
+                    <Link
+                    href={"/quiz/2/"} style={{
+                        textAlign  : "right",
+                        textDecoration  : "none",
+                        color  : "#000"
+                    }}>
+                        次へ {">>"}
+                    </Link>
+            </div>
+            )   : ("")}
+
         </Layout >
     )
 }

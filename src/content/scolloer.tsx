@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
-export default function Scolloer({ children }: any) {
+export default function Scolloer({ children }  : any) {
     const [windowSize, setWindowSize] = useState({
-		height: 0,
-		width: 0
+		height  : 0,
+		width  : 0
 	});
 	const isBrowser = typeof window !== "undefined";
 	useEffect(() => {
 		if (isBrowser) {
 			const handleResize = () => {
 				setWindowSize({
-					height: window.innerHeight,
-					width: window.innerWidth
+					height  : window.innerHeight,
+					width  : window.innerWidth
 				});
 			};
 
@@ -24,11 +24,11 @@ export default function Scolloer({ children }: any) {
 	}, [])
     return (
         <div style={{
-            height: windowSize.width > 400 ? '500px': '270px',
+            height  : windowSize.width > 400 ? '500px'  : '270px',
         }}>
             <div style={{
-                height: '100%',
-                overflowY: 'auto',
+                height  : '100%',
+                overflowY  : 'auto',
             }}>
                 {children}
             </div>

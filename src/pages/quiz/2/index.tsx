@@ -14,43 +14,46 @@ export default function QuizPage1() {
     const Content = () => {
         return (
             <>
-                <br />
-                私はソーンダイク警部と共に、ジョン博士の自殺を見ていくと、５つの疑問点があった。<br /> <br />
-                １つ目は彼の自殺の動機。<br />
-                ２つ目は不自然に壊され放置されたPC。<br />
-                ３つ目は彼が自殺時に飲んだ薬について。<br />
-                ４つ目はこのラボに点在する不自然な数字。<br /> <br />
-                ５つ目は個人的な疑問だが、このラボについてミリアに聞いても、返答が無いことだ。さて、どれから調べていこうか <br />
+                <br />              
+                ソーンダイク警部   :こいつの関係者に聞いてみるか <br/>
+                <br/>
+                関係者としてノア博士、アインハードの二人に改めて話を聞いてみた。<br/>
+                <br/>
+                ソーンダイク警部   :まずノア博士についてだが、彼は助手ってのもあって会う機会も多かった。自殺の少し前にジョン博士と会い、ラボの仲間に送るプレゼントについて相談していたらしい。 <br/>
+                <br/>
+                ソーンダイク警部   :次に彼の専属の執事であるアインハードだが、彼が言うにはジョン博士は最近研究やラボの方向性について悩んで引きこもることがよくあった。と言ってたな。 <br/>
+                <br/>
+                ソーンダイク警部   :ノア博士とアインハードの話で彼が自殺する理由がはっきりしなかったな。お前はこの自殺どう思う？ <br/>
+                <br/>
             </>
         )
     }
-    return (
 
+    return (
         <Layout>
 
-            <HMeta pageTitle={"Q2"} />
+            <HMeta/>
             <div
                 onClick={() => {
                     setTypingStatus(2);
                 }}
                 style={{
-                    height: '77vh',
+                    height  : '77vh',
                 }}>
                 {/** 2回目以降は?load=trueでアニメーション停止 */}
                 <p>(タップでスキップ)</p>
                 <Scolloer>
-                    {typingStatus == 2 ? (<Content />) : (
+                    {typingStatus == 2 ? (<Content />)   : (
                         <TypeAnimation
-                            style={{ whiteSpace: 'pre-line', display: 'block', height: "100%" }}
+                            style={{ whiteSpace  : 'pre-line', display  : 'block', height  : "100%" }}
                             sequence={[
                                 `
-                    私はソーンダイク警部と共に、ジョン博士の自殺を見ていくと、５つの疑問点があった。\n
-                    １つ目は彼の自殺の動機。
-                    ２つ目は不自然に壊され放置されたPC。
-                    ３つ目は彼が自殺時に飲んだ薬について。
-                    ４つ目はこのラボに点在する不自然な数字。\n
-                        ５つ目は個人的な疑問だが、このラボについてミリアに聞いても、返答が無いことだ。さて、どれから調べていこうか
-					`,
+                                ソーンダイク警部   :こいつの関係者に聞いてみるか \n
+                                関係者としてノア博士、アインハードの二人に改めて話を聞いてみた。\n
+                                ソーンダイク警部   :まずノア博士についてだが、彼は助手ってのもあって会う機会も多かった。自殺の少し前にジョン博士と会い、ラボの仲間に送るプレゼントについて相談していたらしい。 \n
+                                ソーンダイク警部   :次に彼の専属の執事であるアインハードだが、彼が言うにはジョン博士は最近研究やラボの方向性について悩んで引きこもることがよくあった。と言ってたな。 \n
+                                ソーンダイク警部   :ノア博士とアインハードの話で彼が自殺する理由がはっきりしなかったな。お前はこの自殺どう思う？\n
+                                `,
                                 () => {
                                     setTypingStatus(2);
                                 }
@@ -60,31 +63,28 @@ export default function QuizPage1() {
                         />)}
                 </Scolloer>
                 {typingStatus == 2 ? (
-                    <div style={{
-                        padding: "10px 20px"
-                    }}>
-                        <div>
-                            <Link href={"/quiz/1/doctor-suicide"}
-                                style={{
-                                    textDecoration: "none",
-                                    color: "#000"
-                                }}>
-                                博士の死因・周辺のアリバイを調べる
-                            </Link>
-                        </div>
-                        {/** 2回目以降は?load=trueでアニメーション停止 */}
-                        <div>
+                       <div style={{
+                        display  : "flex",
+                        justifyContent  : "space-between"
+                        }}>
                             <Link
-                                href="/?load=true"
-                                style={{
-                                    textDecoration: "none",
-                                    color: "black"
-                                }}>
-                                {"<<"} 戻る
+                            href={"/quiz/1/"} style={{
+                                textAlign  : "right",
+                                textDecoration  : "none",
+                                color  : "#000"
+                            }}>
+                               {"<< "} 戻る
                             </Link>
-                        </div>
+                            <Link
+                            href={"/quiz/3/"} style={{
+                                textAlign  : "right",
+                                textDecoration  : "none",
+                                color  : "#000"
+                            }}>
+                                次へ {">>"}
+                            </Link>
                     </div>
-                ) : ('')}
+                )   : ('')}
             </div>
         </Layout >
     )

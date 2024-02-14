@@ -9,11 +9,11 @@ const QuizPage = () => {
         <Layout>
             <div
                 style={{
-                    color: "#00ff00"
+                    color  : "#00ff00"
                 }}>
                 {truth === '1' ? (
                     <Fail />
-                ) : (<Succes />)}
+                )   : (<Succes />)}
             </div>
         </Layout>
     );
