@@ -69,7 +69,7 @@ export default function Layout({ children }: any) {
 					backgroundColor: "#00000058",
 					color: "#fff",
 					position: "fixed",
-					width:"350px",
+					width: "350px",
 					left: "0",
 					borderRight: "1px solid #fff",
 					height: "100%",
@@ -193,6 +193,16 @@ export default function Layout({ children }: any) {
 						}}>
 						閉じる
 					</button>
+					<div style={{
+						textAlign: "center",
+						width: "100%",
+					}}>
+						<p style={{
+							fontSize: "12px",
+						}}>
+					  		制作: CIDEXPO2024 実行委員会
+						</p>
+					</div>
 				</div>
 			</div>
 			<div
