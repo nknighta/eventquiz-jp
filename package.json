@@ -1,28 +1,28 @@
 {
-  "name"  : "cid-expo-quiz",
-  "version"  : "1.0.0",
-  "description"  : "",
-  "main"  : "index.js",
-  "scripts"  : {
-    "dev"  : "next dev",
-    "dev  :net"  : "next dev -H 172.31.22.198",
-    "build"  : "next build",
-    "start"  : "next start"
+  "name": "cid-expo-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "dev  :net": "next dev -H 172.31.22.198",
+    "build": "next build",
+    "start": "next start"
   },
-  "keywords"  : [],
-  "author"  : "",
-  "license"  : "MIT",
-  "dependencies"  : {
-    "@types/next"  : "^9.0.0",
-    "@types/node"  : "^20.11.7",
-    "@types/react"  : "^18.2.48",
-    "next"  : "^13.4",
-    "react"  : "^18.2.0",
-    "react-dom"  : "^18.2.0",
-    "react-type-animation"  : "^3.2.0",
-    "typescript"  : "^5.3.3"
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/next": "^9.0.0",
+    "@types/node": "^20.11.7",
+    "@types/react": "^18.2.48",
+    "next": "13.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-type-animation": "^3.2.0",
+    "typescript": "^5.3.3"
   },
-  "devDependencies"  : {
-    "dotenv"  : "^16.4.1"
+  "devDependencies": {
+    "dotenv": "^16.4.1"
   }
 }

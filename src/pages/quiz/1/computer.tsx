@@ -2,30 +2,23 @@ import Layout from "../../../layout/main";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import Scolloer from "../../../content/scolloer";
 import HMeta from "../../../content/hmeta";
 
-export default function QuizPage1() {
+export default function Computer() {
     const [typingStatus, setTypingStatus] = useState(0);
 
     const Content = () => {
         return (
             <>
                 <br />
-                私はソーンダイク警部と共に、ジョン博士の自殺を見ていくと、５つの疑問点があった。<br /> <br />
-                １つ目は彼の自殺の動機。<br />
-                ２つ目は不自然に壊され放置されたPC。<br />
-                ３つ目は彼が自殺時に飲んだ薬について。<br />
-                ４つ目はこのラボに点在する不自然な数字。<br /> <br />
-                ５つ目は個人的な疑問だが、このラボについてミリアに聞いても、返答が無いことだ。さて、どれから調べていこうか <br />
+                4
             </>
         )
     }
     return (
 
         <Layout>
-
             <HMeta />
             <div
                 onClick={() => {
@@ -41,13 +34,7 @@ export default function QuizPage1() {
                         <TypeAnimation
                             style={{ whiteSpace: 'pre-line', display: 'block', height: "100%" }}
                             sequence={[
-                                `
-                    私はソーンダイク警部と共に、ジョン博士の自殺を見ていくと、５つの疑問点があった。\n
-                    １つ目は彼の自殺の動機。
-                    ２つ目は不自然に壊され放置されたPC。
-                    ３つ目は彼が自殺時に飲んだ薬について。
-                    ４つ目はこのラボに点在する不自然な数字。\n
-                        ５つ目は個人的な疑問だが、このラボについてミリアに聞いても、返答が無いことだ。さて、どれから調べていこうか
+                                `4
 					`,
                                 () => {
                                     setTypingStatus(2);

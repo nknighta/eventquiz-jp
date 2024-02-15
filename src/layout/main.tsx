@@ -14,8 +14,8 @@ export default function Layout({ children }  : any) {
 		if (isBrowser) {
 			const handleResize = () => {
 				setWindowSize({
-					height  : window.innerHeight,
-					width  : window.innerWidth
+					height : window.innerHeight,
+					width : window.innerWidth
 				});
 			};
 
@@ -39,20 +39,20 @@ export default function Layout({ children }  : any) {
 	// #F8E4ABaa
 	return (
 		<div style={{
-			height  : windowSize.height,
-			backgroundColor  : menuopen ? "#ab9d76"   : "#F8E4AB",
-			transition  : "background-color 0.5s",
-			fontSize  : windowSize.width > 400 ? '23px'   : '17px',
-			overflow  : "hidden",
+			height : windowSize.height,
+			backgroundColor : menuopen ? "#ab9d76"   : "#F8E4AB",
+			transition : "background-color 0.5s",
+			fontSize : windowSize.width > 400 ? '23px'   : '17px',
+			overflow : "hidden",
 		}}>
 			<div>
 				<button
 					style={{
-						position  : "fixed",
-						margin  : "10px 10px",
-						height  : "40px",
-						width  : "130px",
-						fontSize  : "20px",
+						position : "fixed",
+						margin : "10px 10px",
+						height : "40px",
+						width : "130px",
+						fontSize : "20px",
 						borderRadius  : "5px",
 						border  : "none",
 						background  : "#00000032",
@@ -156,7 +156,7 @@ export default function Layout({ children }  : any) {
 						</div>
 						<div>
 							<button onClick={() => {
-								router.push("https  ://cidexpo2024.cid-ac.com/works-experience/")
+								router.push("https://cidexpo2024.cid-ac.com/works-experience/")
 							}}
 								style={{
 									margin  : "10px 10px",
