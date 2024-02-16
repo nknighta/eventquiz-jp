@@ -24,7 +24,7 @@ export default function Scolloer({ children }  : any) {
 	}, [])
     return (
         <div style={{
-            height  : windowSize.width > 400 ? '500px'  : '270px',
+            height  : windowSize.width > 400 ? '370px' : '270px',
         }}>
             <div style={{
                 height  : '100%',

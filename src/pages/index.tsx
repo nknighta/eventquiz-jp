@@ -25,7 +25,7 @@ const QuizPage = () => {
                 alignItems: "center",
                 fontSize: 40,
             }}>
-                <Link href="/second" style={{
+                <Link href="/prologue" style={{
                     color: "black",
                 }}>
                     スタート

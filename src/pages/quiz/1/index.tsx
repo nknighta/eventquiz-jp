@@ -30,16 +30,13 @@ export default function QuizPage1() {
             <div
                 onClick={() => {
                     setTypingStatus(2);
-                }}
-                style={{
-                    height: '77vh',
                 }}>
                 {/** 2回目以降は?load=trueでアニメーション停止 */}
                 <p>(タップでスキップ)</p>
                 <Scolloer>
                     {typingStatus == 2 ? (<Content />) : (
                         <TypeAnimation
-                            style={{ whiteSpace: 'pre-line', display: 'block', height: "100%" }}
+                            style={{ whiteSpace: 'pre-line', display: 'block', }}
                             sequence={[
                                 `
                     私はソーンダイク警部と共に、ジョン博士の自殺を見ていくと、５つの疑問点があった。\n
@@ -93,16 +90,16 @@ export default function QuizPage1() {
                                         textDecoration: "none",
                                         color: "#000"
                                     }}>
-                                    壊れたPC{" >>"}
+                                    PCの修理{" >>"}
                                 </Link>
                             </div>
                             <div>
-                                <Link href={"/quiz/1/sleep-medication"}
+                                <Link href={"/quiz/1/why-dead"}
                                     style={{
                                         textDecoration: "none",
                                         color: "#000"
                                     }}>
-                                    睡眠薬{" >>"}
+                                    死因の調査{" >>"}
                                 </Link>
                             </div>
                             <div>
