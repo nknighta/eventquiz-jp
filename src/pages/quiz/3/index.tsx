@@ -106,7 +106,7 @@ export default function QuizPage1() {
                         justifyContent: "space-between"
                         }}>
                             <Link
-                            href={"/quiz/1/"} style={{
+                            href={"https://f22ba092.github.io/MASTAR/2024_EXPO_profile/milliaProfile.html"} style={{
                                 textAlign: "right",
                                 textDecoration: "none",
                                 color: "#000"

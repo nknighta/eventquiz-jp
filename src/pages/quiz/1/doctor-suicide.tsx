@@ -77,12 +77,12 @@ const Chat = () => {
                        {"<< "} 戻る
                     </Link>
                     <Link
-                    href={"/quiz/2/"} style={{
+                    href={"https://f22ba092.github.io/MASTAR/2024_EXPO_profile/index.html"} style={{
                         textAlign  : "right",
                         textDecoration  : "none",
                         color  : "#000"
                     }}>
-                        次へ {">>"}
+                        調べる {">>"}
                     </Link>
             </div>
             )   : ("")}

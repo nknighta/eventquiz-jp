@@ -12,7 +12,7 @@ export default function Computer() {
         return (
             <>
                 <br />
-                4
+                ノア博士とアインハードの話で彼が自殺する理由がはっきりしなかったな。お前はこの自殺どう思う？
             </>
         )
     }
@@ -34,8 +34,9 @@ export default function Computer() {
                         <TypeAnimation
                             style={{ whiteSpace: 'pre-line', display: 'block', height: "100%" }}
                             sequence={[
-                                `4
-					`,
+                                `
+                                    ノア博士とアインハードの話で彼が自殺する理由がはっきりしなかったな。お前はこの自殺どう思う？
+                                    `,
                                 () => {
                                     setTypingStatus(2);
                                 }
@@ -48,69 +49,18 @@ export default function Computer() {
                     <div style={{
                         padding: "10px 20px",
                         display: "flex",
-                        justifyContent: "space-between"
+                        justifyContent: "end"
                     }}>
                         {/** 2回目以降は?load=trueでアニメーション停止 */}
                         <div>
                             <Link
-                                href="/?load=true"
+                                href="/quiz/1/"
                                 style={{
                                     textDecoration: "none",
                                     color: "black"
                                 }}>
-                                {"<<"} 戻る
+                                {"<<"} 会話を終了する
                             </Link>
-                        </div>
-
-                        <div style={{
-                            height: "10vh",
-                        }}>
-                            <div>
-                                <Link href={"/quiz/1/doctor-suicide"}
-                                    style={{
-                                        textDecoration: "none",
-                                        color: "#000"
-                                    }}>
-                                    自殺の動機{" >>"}
-                                </Link>
-                            </div>
-                            <div>
-                                <Link href={"/quiz/1/computer"}
-                                    style={{
-                                        textDecoration: "none",
-                                        color: "#000"
-                                    }}>
-                                    壊れたPC{" >>"}
-                                </Link>
-                            </div>
-                            <div>
-                                <Link href={"/quiz/1/sleep-medication"}
-                                    style={{
-                                        textDecoration: "none",
-                                        color: "#000"
-                                    }}>
-                                    睡眠薬{" >>"}
-                                </Link>
-                            </div>
-                            <div>
-                                <Link href={"/quiz/1/doctor-suicide"}
-                                    style={{
-                                        textDecoration: "none",
-                                        color: "#000"
-                                    }}>
-                                    数字{" >>"}
-                                </Link>
-                            </div>
-                            
-                            <div>
-                                <Link href={"/quiz/1/doctor-suicide"}
-                                    style={{
-                                        textDecoration: "none",
-                                        color: "#000"
-                                    }}>
-                                    ミリアについて{" >>"}
-                                </Link>
-                            </div>
                         </div>
                     </div>
                 ) : ('')}
