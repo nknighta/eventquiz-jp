@@ -1,10 +1,9 @@
 import { TypeAnimation } from "react-type-animation"
 import Scolloer from "../../content/scolloer";
-
+import Layout from "../../layout/main";
 export default function E1() {
     return (
-        <>
-
+        <Layout>
             <Scolloer>
                 <div>
                     <TypeAnimation
@@ -25,6 +24,6 @@ export default function E1() {
                     />
                 </div>
             </Scolloer>
-        </>
+        </Layout>
     )
 }
