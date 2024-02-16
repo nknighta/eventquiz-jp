@@ -85,7 +85,7 @@ export default function QuizPage1() {
                                 </Link>
                             </div>
                             <div>
-                                <Link href={"/quiz/1/computer"}
+                                <Link href={"/quiz/1/repair"}
                                     style={{
                                         textDecoration: "none",
                                         color: "#000"
@@ -103,17 +103,17 @@ export default function QuizPage1() {
                                 </Link>
                             </div>
                             <div>
-                                <Link href={"/quiz/1/doctor-suicide"}
+                                <Link href={"/story/dr-develop"}
                                     style={{
                                         textDecoration: "none",
                                         color: "#000"
                                     }}>
-                                    数字{" >>"}
+                                    研究の調査{" >>"}
                                 </Link>
                             </div>
                             
                             <div>
-                                <Link href={"/quiz/1/doctor-suicide"}
+                                <Link href={"/story/millia"}
                                     style={{
                                         textDecoration: "none",
                                         color: "#000"
