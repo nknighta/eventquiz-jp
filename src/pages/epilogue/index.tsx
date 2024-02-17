@@ -8,7 +8,7 @@ export default function Epilogue() {
         <Layout>
             <div style={{
                 fontSize: 23,
-                height: "30vh",
+                height: "60vh",
             }}>
                 <Scolloer>
                     <div>
