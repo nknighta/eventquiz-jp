@@ -28,26 +28,7 @@ export default function Epilogue() {
                     </div>
                 </Scolloer>
             </div>
-            <div>
-                <Link
-                    style={{
-                        color: "black",
-                        textDecoration: "none",
-                    }}
-                    href="/epilogue/1">
-                    AI を放置する
-                </Link>
-            </div>
-            <div>
-                <Link
-                    style={{
-                        color: "black",
-                        textDecoration: "none",
-                    }}
-                    href="/epilogue/1">
-                    事件を公にする
-                </Link>
-            </div>
+                
         </Layout>
     )
 }
