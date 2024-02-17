@@ -18,7 +18,6 @@ export default function Epilogue() {
                                 `ソーンダイク警部 : 結局は自殺じゃなくてミリアによる殺人だったわけだがお前はどう思った？」
                                 ソーンダイク警部 : 人類を守るためとは言え、博士を殺してしまった。
                                 ソーンダイク警部 : そんなAIは危険すぎる。今ここで消去してしまった方が良いのかも知れねぇな。」
-                                二択
                                 主人公「……」
                                 `,
                             ]}
@@ -27,8 +26,7 @@ export default function Epilogue() {
                         />
                     </div>
                 </Scolloer>
-            </div>
-                
+            </div>           
         </Layout>
     )
 }
