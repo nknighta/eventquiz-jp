@@ -56,7 +56,6 @@ export default function QuizPage1() {
                 </Scolloer>
                 {typingStatus == 2 ? (
                     <div style={{
-                        padding: "10px 20px",
                         display: "flex",
                         justifyContent: "space-between"
                     }}>

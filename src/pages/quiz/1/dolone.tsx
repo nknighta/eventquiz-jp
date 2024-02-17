@@ -2,7 +2,7 @@ import Layout from "../../../layout/main";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import Image from "next/image";
 import Scolloer from "../../../content/scolloer";
 import HMeta from "../../../content/hmeta";
 
@@ -70,6 +70,7 @@ export default function QuizPage1() {
                 {/** 2回目以降は?load=trueでアニメーション停止 */}
                 <p>(タップでスキップ)</p>
                 <Scolloer>
+                    <Image src="/bin.jpg" height={300} width={300} alt="robot" />
                     {typingStatus == 2 ? (<Content />) : (
                         <TypeAnimation
                             style={{ whiteSpace: 'pre-line', display: 'block', }}
