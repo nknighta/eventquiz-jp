@@ -42,8 +42,8 @@ export default function QuizPage1() {
                         color: "black",
                         textDecoration: "none",
                     }}
-                    href={"/story/millia"}>
-                    次へ
+                    href={"/quiz/1"}>
+                    TOPに戻る
                 </Link>
             ) : ("")}
         </Layout >
