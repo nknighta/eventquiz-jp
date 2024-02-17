@@ -70,7 +70,7 @@ export default function QuizPage1() {
                 {/** 2回目以降は?load=trueでアニメーション停止 */}
                 <p>(タップでスキップ)</p>
                 <Scolloer>
-                    <Image src="/bin.jpg" height={300} width={300} alt="robot" />
+                    <Image src="/cid-expo-quiz/bin.jpg" height={300} width={300} alt="robot" />
                     {typingStatus == 2 ? (<Content />) : (
                         <TypeAnimation
                             style={{ whiteSpace: 'pre-line', display: 'block', }}
