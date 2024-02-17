@@ -1,13 +1,14 @@
 import { TypeAnimation } from "react-type-animation";
 import Scolloer from "../../content/scolloer";
 import Layout from "../../layout/main";
+import Link from "next/link";
 
 export default function Epilogue() {
     return (
         <Layout>
             <div style={{
                 fontSize: 23,
-                height: "63vh",
+                height: "30vh",
             }}>
                 <Scolloer>
                     <div>
@@ -26,6 +27,26 @@ export default function Epilogue() {
                         />
                     </div>
                 </Scolloer>
+            </div>
+            <div>
+                <Link
+                    style={{
+                        color: "black",
+                        textDecoration: "none",
+                    }}
+                    href="/epilogue/1">
+                    AI を放置する
+                </Link>
+            </div>
+            <div>
+                <Link
+                    style={{
+                        color: "black",
+                        textDecoration: "none",
+                    }}
+                    href="/epilogue/1">
+                    事件を公にする
+                </Link>
             </div>
         </Layout>
     )
