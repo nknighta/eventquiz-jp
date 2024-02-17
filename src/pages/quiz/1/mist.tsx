@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import Scolloer from "../../../content/scolloer";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function MIST() {
     const [typingStatus, setTypingStatus] = useState(0);
@@ -113,7 +114,9 @@ export default function MIST() {
                             謎解き開始
                         </div>
                         <div>
-                            JAN コードの暗号を解読しろ
+                            <Link href={"https://f22ba092.github.io/MASTAR/EXPO_Keyword/index.html"}>
+                                JAN コードの暗号を解読しろ
+                            </Link>
                         </div>
                     </div>
                 ) : ("")}
