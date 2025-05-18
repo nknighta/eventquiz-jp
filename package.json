@@ -1,11 +1,10 @@
 {
-  "name": "cid-expo-quiz",
+  "name": "eventquiz-jp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "dev  :net": "next dev -H 172.31.22.198",
     "build": "next build",
     "start": "next start"
   },
